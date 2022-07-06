@@ -31,11 +31,11 @@
         </div>
 
         <hr />
-        
+
         <div>
             <x-form.select
-                name="surah"
                 :select2="true"
+                name="surah_number"
                 label="Pilih Surah"
             >
                 @foreach ($surahs as $surah)
@@ -83,7 +83,7 @@
     @push('scripts')
         <script type="text/javascript">
             $(document).ready(function() {
-                $('select[name="surah"], select[name="ability"]').select2();
+                $('select[name="surah_number"], select[name="ability"]').select2();
 
                 $('#select-rooms').select2({
                     width: '100%',
