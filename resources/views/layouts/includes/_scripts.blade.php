@@ -8,7 +8,7 @@
 <script src="{{ asset('plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.5') }}"></script>
 <script src="{{ asset('js/pages/widgets.js?v=7.0.5') }}"></script>
 
-<script src="{{ mix('js/app.js') }}"></script>
+@vite('resources/js/app.js')
 {{-- <script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script> --}}
 <script src="{{ asset('vendor/datatables/buttons.server-side.custom.js') }}"></script>
 
