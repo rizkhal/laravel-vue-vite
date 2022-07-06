@@ -15,8 +15,7 @@
                 class="form-control"
                 data-allow-clear="true"
                 data-placeholder="Pilih Kelas"
-            >
-            </select>
+            ></select>
         </div>
 
         <div class="form-group">
@@ -28,54 +27,57 @@
                 class="form-control"
                 data-allow-clear="true"
                 data-placeholder="Pilih Siswa"
+            ></select>
+        </div>
+
+        <hr />
+        
+        <div>
+            <x-form.select
+                name="surah"
+                :select2="true"
+                label="Pilih Surah"
             >
-            </select>
-        </div>
+                @foreach ($surahs as $surah)
+                    <option value="{{ $surah['number'] }}">{{ $surah['englishName'] }}</option>
+                @endforeach
+            </x-form.select>
 
-        <x-form.select
-            name="surah"
-            :select2="true"
-            label="Pilih Surah"
-        >
-            @foreach ($surahs as $surah)
-                <option value="{{ $surah['number'] }}">{{ $surah['englishName'] }}</option>
-            @endforeach
-        </x-form.select>
-
-        <div class="row">
-            <div class="col-lg-6">
-                <x-form.select
-                    name="surah"
-                    :select2="true"
-                    label="Mulai dari"
-                >
-                    @foreach ($surahs as $surah)
-                        <option value="{{ $surah['number'] }}">{{ $surah['englishName'] }}</option>
-                    @endforeach
-                </x-form.select>
+            <div class="row">
+                <div class="col-lg-6">
+                    <x-form.select
+                        name="surah"
+                        :select2="true"
+                        label="Mulai dari"
+                    >
+                        @foreach ($surahs as $surah)
+                            <option value="{{ $surah['number'] }}">{{ $surah['englishName'] }}</option>
+                        @endforeach
+                    </x-form.select>
+                </div>
+                <div class="col-lg-6">
+                    <x-form.select
+                        name="surah"
+                        :select2="true"
+                        label="Sampai pada"
+                    >
+                        @foreach ($surahs as $surah)
+                            <option value="{{ $surah['number'] }}">{{ $surah['englishName'] }}</option>
+                        @endforeach
+                    </x-form.select>
+                </div>
             </div>
-            <div class="col-lg-6">
-                <x-form.select
-                    name="surah"
-                    :select2="true"
-                    label="Sampai pada"
-                >
-                    @foreach ($surahs as $surah)
-                        <option value="{{ $surah['number'] }}">{{ $surah['englishName'] }}</option>
-                    @endforeach
-                </x-form.select>
-            </div>
-        </div>
 
-        <x-form.select
-            name="ability"
-            :select2="true"
-            label="Pilih Kemampuan"
-        >
-            @foreach ($abilities as $ability)
-                <option value="{{ $ability['value'] }}">{{ $ability['label'] }}</option>
-            @endforeach
-        </x-form.select>
+            <x-form.select
+                name="ability"
+                :select2="true"
+                label="Pilih Kemampuan"
+            >
+                @foreach ($abilities as $ability)
+                    <option value="{{ $ability['value'] }}">{{ $ability['label'] }}</option>
+                @endforeach
+            </x-form.select>
+        </div>
     </x-form.wrapper>
 
     @push('scripts')
