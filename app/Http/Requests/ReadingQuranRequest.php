@@ -9,7 +9,9 @@ class ReadingQuranRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'room_id' => ['required'],
+            'student_id' => ['required'],
+            'surah_number' => ['required'],
         ];
     }
 }

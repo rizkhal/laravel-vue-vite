@@ -2,16 +2,23 @@
 
 namespace App\Http\Controllers\Json;
 
+use App\Facades\Quran;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\RoomResource;
 use App\Http\Resources\StudentResource;
 use App\Models\Room;
 use App\Models\Student;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 class Select2Controller extends Controller
 {
+    public function surahs(Request $request)
+    {
+        return response()->json([
+            'data' => Quran::surahs(),
+        ]);
+    }
+
     public function rooms(Request $request)
     {
         return RoomResource::collection(
@@ -27,10 +34,6 @@ class Select2Controller extends Controller
         return StudentResource::collection(
             Student::query()
                 ->when($request->get('rooms'), function ($query, $room) {
-                    Log::debug(__METHOD__, [
-                        'ROOM' => $room,
-                    ]);
-
                     return $query->where('id_kelas', $room);
                 })
                 ->when($request->get('school'), fn ($query, $school) => $query->where('id_identitas_sekolah', $school))
