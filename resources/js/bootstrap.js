@@ -1,6 +1,8 @@
 import $ from "jquery";
-window._ = require("lodash");
-window.axios = require("axios");
+import _ from "lodash";
+window._ = _;
+import axios from "axios";
+window.axios = axios;
 
 import "sweetalert2/src/sweetalert2.scss";
 import Swal from "sweetalert2/dist/sweetalert2.js";
@@ -17,9 +19,9 @@ try {
 window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
 // datatable
-require("bootstrap");
-require("datatables.net-bs4");
-require("datatables.net-buttons-bs4");
+import "bootstrap";
+import "datatables.net-bs4";
+import "datatables.net-buttons-bs4";
 
 $.ajaxSetup({
   headers: {
