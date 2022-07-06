@@ -81,15 +81,15 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => \Smartschool\Sso\Models\User::class,
+            'model' => \Smartschool\Auth\Models\User::class,
         ],
         'siswa' => [
             'driver' => 'eloquent',
-            'model' => \Smartschool\Sso\Models\Student::class,
+            'model' => App\Models\Student::class,
         ],
         'guru' => [
             'driver' => 'eloquent',
-            'model' => \Smartschool\Sso\Models\Teacher::class,
+            'model' => App\Models\Teacher::class,
         ],
         // 'users' => [
         //     'driver' => 'database',

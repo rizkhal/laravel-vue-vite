@@ -22,7 +22,7 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(config('smartschool-sso.admin.home'));
+                return redirect(config('smartschool-auth.admin.home'));
             }
         }
 

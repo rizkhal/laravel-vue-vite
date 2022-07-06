@@ -11,9 +11,15 @@ class Quran
 {
     public function surahs()
     {
-        $response = Http::quran()->get('/v1/surah');
+        if (!Cache::has('surahs')) {
+            $response = Http::quran()->get('/v1/surah');
 
-        return $response->json();
+            if ($response->ok()) {
+                return Cache::rememberForever('surahs', fn () => $response->json()['data']);
+            }
+        }
+
+        return Cache::get('surahs');
     }
 
     public function juz(int $numberOfJuz)

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa2f5b6ab3cc7c88bcc2951d582ae922",
+    "content-hash": "003eaac9510301aa1d91fc436eef8602",
     "packages": [
         {
             "name": "brick/math",
@@ -2878,17 +2878,17 @@
             "time": "2022-03-27T21:42:02+00:00"
         },
         {
-            "name": "smartschool/sso",
-            "version": "v0.0.2",
+            "name": "smartschool/auth",
+            "version": "v0.0.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:rizkhal/smartschool-auth.git",
-                "reference": "fe35be9e337d3156bd69da7d6b16a4dcef123059"
+                "reference": "717ecb4af3378ef8feba08bba27164c01bc148d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rizkhal/smartschool-auth/zipball/fe35be9e337d3156bd69da7d6b16a4dcef123059",
-                "reference": "fe35be9e337d3156bd69da7d6b16a4dcef123059",
+                "url": "https://api.github.com/repos/rizkhal/smartschool-auth/zipball/717ecb4af3378ef8feba08bba27164c01bc148d2",
+                "reference": "717ecb4af3378ef8feba08bba27164c01bc148d2",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2912,18 +2912,18 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Smartschool\\Sso\\SsoJwtServiceProvider"
+                        "Smartschool\\Auth\\AuthServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Smartschool\\Sso\\": "src/"
+                    "Smartschool\\Auth\\": "src/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Smartschool\\Sso\\Tests\\": "tests/"
+                    "Smartschool\\Auth\\Tests\\": "tests/"
                 }
             },
             "notification-url": "https://smartschool.repo.repman.io/downloads",
@@ -2936,12 +2936,12 @@
                     "email": "lamaaurizkhal@gmail.com"
                 }
             ],
-            "description": "Simple SSO Based",
+            "description": "Simple Auth for Smart School",
             "support": {
-                "source": "https://github.com/rizkhal/smartschool-auth/tree/v0.0.2",
+                "source": "https://github.com/rizkhal/smartschool-auth/tree/v0.0.4",
                 "issues": "https://github.com/rizkhal/smartschool-auth/issues"
             },
-            "time": "2022-07-06T03:44:32+00:00"
+            "time": "2022-07-06T05:04:56+00:00"
         },
         {
             "name": "symfony/console",

@@ -26,3 +26,18 @@ $.ajaxSetup({
     "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
   },
 });
+
+function customSelect2(placeholder, object, url) {
+  object.select2({
+      placeholder: placeholder,
+      ajax: {
+          url: url,
+          dataType: 'json',
+          delay: 250,
+          processResults: function (data) {
+              return data;
+          },
+          cache: true
+      }
+  });
+}
