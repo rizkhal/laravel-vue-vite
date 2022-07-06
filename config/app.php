@@ -185,7 +185,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Yajra\DataTables\DataTablesServiceProvider::class,
         App\Providers\QuranCloudServiceProvider::class,
 
         /*
@@ -211,10 +210,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        'Menu' => App\Theme\Menu::class,
         'quran' => App\Facades\Quran::class,
-        'Metronic' => App\Theme\Metronic::class,
-        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
     ])->toArray(),
 
 ];
